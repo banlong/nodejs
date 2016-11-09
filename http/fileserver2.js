@@ -1,3 +1,6 @@
+/* jshint esnext:true */
+//Instruct jshint to run only on ES6
+
 var http = require('http'),
     url = require('url'),
     path = require('path'),
@@ -16,7 +19,7 @@ var dir = "./http/public/";
 var port = 3000;
 
 http.createServer(function(req, res) {
-    console.log(`Request for ${req.url}`);
+    console.log(`HTTP Request for ${req.url}`);
 
     //file path
     var filename = path.join(dir, req.url);

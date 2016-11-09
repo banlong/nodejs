@@ -10,7 +10,7 @@ var server  = http.createServer(function(req, res) {
     res.end(`<!DOCTYPE html>
     <html>
     <head>
-    <title>Web Server</title>
+    <title>My Web Server</title>
     </head>
     <body>
     <h1>Hello World</h1>

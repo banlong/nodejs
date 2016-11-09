@@ -1,3 +1,5 @@
+/* jshint esnext:true */
+//Instruct jshint to run only on ES6
 
 var http = require("http");
 var url = require('url');
@@ -6,7 +8,7 @@ var path = require("path");
 
 
 http.createServer(function(req, res) {
-    console.log(`#{req.method} request for ${req.url}`);
+    console.log(`HTTP Request for ${req.url}`);
     if (req.url ==="/") {
         fs.readFile("./http/public/index.html", "UTF-8", function (err, html) {
             res.writeHead(200, {"Content-Type": "text/html"});
